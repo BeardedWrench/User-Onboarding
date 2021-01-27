@@ -8,8 +8,8 @@ export default function User( props ){
     }
 
     return(
-        <div>
-            <h2>Name: { details.first_name + " " + details.last_name }</h2>
+        <div className="user-card">
+            <p>Name: { details.first_name + " " + details.last_name }</p>
             <p>Email: { details.email }</p>
         </div>
     )

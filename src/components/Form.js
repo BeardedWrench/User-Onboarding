@@ -16,15 +16,15 @@ export default function Form( props ){
 
     return(
 
-        <form onSubmit={ onSubmit } >
+        <form onSubmit={ onSubmit } className="info-form">
             <h2>User Onboarding</h2>
             <label>
                 First Name: 
-                <input type="text" name="first_name" value={ values.name } onChange={ onChange } />
+                <input type="text" name="first_name" value={ values.first_name } onChange={ onChange } />
             </label>
             <label>
                 Last Name: 
-                <input type="text" name="last_name" value={ values.name } onChange={ onChange } />
+                <input type="text" name="last_name" value={ values.last_name } onChange={ onChange } />
             </label>
             <label>
                 Email: 

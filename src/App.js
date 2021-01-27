@@ -49,7 +49,7 @@ function App() {
         setUsers( [ res.data, ...users ] ) 
       })
       .catch( err => console.log( err ) )
-      .finally( () => setFormValues( initFormVal ) )
+      .finally( setFormValues( initFormVal ) )
   }
 
   const inputChange =( name, value ) => {
@@ -102,16 +102,15 @@ function App() {
       disabled={ disabled }
       />
 
-      {
-        
-        users.map( user => {
-          return(
-            <User details={ user } />
-          )
-        } )
-      
-     
-      }
+      <div className="container">
+        {
+          users.map( user => {
+            return(
+              <User details={ user } />
+            )
+          } )
+        }
+      </div>
     </div>
   );
 }
