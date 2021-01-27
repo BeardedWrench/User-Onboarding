@@ -1,9 +1,11 @@
 import * as yup from 'yup';
 
 export default yup.object().shape({
-    name: yup.string()
-        .required( 'Your name is required.' )
-        .min( 2, 'Username must have be atleast 2 characters long.' ),
+    first_name: yup.string()
+        .required( 'Your first name is required.' ),
+        
+    last_name: yup.string()
+        .required( 'Your last name is required.' ),
 
     email: yup.string()
         .email( 'Must be a valid email.' )

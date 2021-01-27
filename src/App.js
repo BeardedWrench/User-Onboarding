@@ -12,13 +12,15 @@ import schema from './validation/schema';
 import User from './components/User';
 
 const initFormVal = {
-  name: '',
+  first_name: '',
+  last_name: '',
   email: '',
   password: '',
   tos: false,
 }
 const initFormErrors = {
-  name: '',
+  first_name: '',
+  last_name: '',
   email: '',
   password: '',
   tos: false,
@@ -44,7 +46,7 @@ function App() {
   const addUser = newUser => {
     axios.post( `https://reqres.in/api/users`, newUser )
       .then( res => {
-        setUsers( [ res.data.data, ...users ] ) 
+        setUsers( [ res.data, ...users ] ) 
       })
       .catch( err => console.log( err ) )
       .finally( () => setFormValues( initFormVal ) )
@@ -73,7 +75,8 @@ function App() {
 
   const formSubmit = () => {
     const newUser = {
-      name: formValues.name.trim(),
+      first_name: formValues.first_name.trim(),
+      last_name: formValues.last_name.trim(),
       email: formValues.email.trim(),
       password: formValues.password.trim(),
       tos: formValues.tos,
@@ -83,7 +86,6 @@ function App() {
 
   useEffect( () => {
     fetchUsers()
-    
   }, [])
 
   useEffect( () => {
