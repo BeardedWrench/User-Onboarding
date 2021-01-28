@@ -52,7 +52,7 @@ function App() {
       .finally( setFormValues( initFormVal ) )
   }
 
-  const inputChange =( name, value ) => {
+  const inputChange = ( name, value ) => {
     yup.reach( schema, name )
     .validate( value )
     .then( () =>{

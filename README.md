@@ -20,17 +20,17 @@ We've seen many different styles of form management by now -- simple to complex.
 
 We want to create a form to onboard a new user to our system. We need _at least_ the following pieces of information about our new user:
 
-- [ ] Name
-- [ ] Email
-- [ ] Password
-- [ ] Terms of Service (checkbox)
-- [ ] A Submit button to send our form data to the server.
+- [X] Name
+- [X] Email
+- [X] Password
+- [X] Terms of Service (checkbox)
+- [X] A Submit button to send our form data to the server.
 
 #### Implement Form Validation and Error Messaging
 
 Form validation is one of the facets of an application that makes it feel polished and controlled from a user perspective. With that in mind, implement the following:
 
-- [ ] Using Yup, set up _at least_ two different validations along with custom error messages that will display on screen when validation fails.
+- [X] Using Yup, set up _at least_ two different validations along with custom error messages that will display on screen when validation fails.
 
 #### Make a POST Request
 
